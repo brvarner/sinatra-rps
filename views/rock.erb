@@ -1,1 +1,11 @@
-<h1>We played rock!</h1>
+<h2>We played rock!</h2>
+<h2>They played <%=@choice%>!</h2>
+
+<% if @choice == "rock"%>
+<h2>We tied!</h2>
+<%elsif @choice == "scissors"%>
+<h2>We won!</h2>
+<%elsif @choice == "paper"%>
+<h2>We lost!</h2>
+<%end%>
+<a href="/">Rules</a>

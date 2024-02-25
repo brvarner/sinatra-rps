@@ -2,21 +2,26 @@ require 'sinatra'
 
 opt_array = ["paper", "rock", "scissors"]
 
+@choice = opt_array.sample()
+
 get('/') do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+  erb(:rules)
 end
 
 get("/paper") do
+  @choice = opt_array.sample
+
   erb(:paper)
 end
 
 get("/rock") do
+  @choice = opt_array.sample
+
   erb(:rock)
 end
 
 get("/scissors") do
+  @choice = opt_array.sample
+  
   erb(:scissors)
 end
